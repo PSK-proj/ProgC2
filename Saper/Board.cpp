@@ -1,6 +1,8 @@
 #include "Board.h"
+#include "allegro.h"
 #include <iostream>
 #include <Windows.h>
+#include <cstdlib>
 
 using namespace std;
 
@@ -37,8 +39,13 @@ void Board::test()
 
 void Board::set_mode(unsigned short mode)
 {
-	//this->mode = mode;
-	this->mode = 3; //! TYMCZASOWO USTAWIONE NA STA£Ê
+	this->mode = mode;
+	//this->mode = 3; //! TYMCZASOWO USTAWIONE NA STA£Ê
+}
+
+unsigned short Board::get_mode()
+{
+	return mode;
 }
 
 void Board::lvl_select()
@@ -163,4 +170,80 @@ void Board::set_field_numbers()
 				tab[pos_y][pos_x] += 1;
 		}
 	}
+}
+
+void Board::clear_memory()
+{
+	free(bombs_list);
+	free(p);
+}
+
+void Board::draw_fields()
+{
+	allegro_draw_fields(p, clicked, x, y, margin_x, margin_y);
+}
+
+void Board::show_safe(int clicked_x, int clicked_y)
+{
+	int** tab = this->p;
+	unsigned short x_f_p, y_f_p;
+	short pos_x, pos_y;
+	for (int j = 0; j < 9; j++)
+	{
+		y_f_p = j / 3;
+		x_f_p = j % 3;
+		pos_y = clicked_y + y_f_p - 1;
+		pos_x = clicked_x + x_f_p - 1;
+
+		if ((!(pos_x < 0 || pos_y < 0 || pos_x > x - 1 || pos_y > y - 1 || clicked[pos_y][pos_x] == 10 || clicked[pos_y][pos_x] == -2)) && tab[pos_y][pos_x] != -1)
+		{
+			clicked[pos_y][pos_x] = 10;
+			clicks_made = clicks_made + 1;
+			if (tab[pos_y][pos_x] == 0)
+				this->show_safe(pos_x, pos_y);
+		}
+	}
+}
+
+int Board::handle_field_click(float mouse_x, float mouse_y, ALLEGRO_EVENT* event)
+{
+	int** tab = this->p;
+	int clicked_x = (mouse_x - margin_x) / 30;
+	int clicked_y = (mouse_y - margin_y) / 30;
+	if (clicked_x >= 0 && clicked_x < x && mouse_x - margin_x >= 0 && clicked_y >= 0 && clicked_y < y && mouse_y - margin_y >= 0)
+	{
+		if (event->mouse.button & 1 && clicked[clicked_y][clicked_x] != -2 && clicked[clicked_y][clicked_x] != 10)
+		{
+			clicked[clicked_y][clicked_x] = 10;
+			if (tab[clicked_y][clicked_x] == -1)
+			{
+				for (int i = 0; i < y; i++)
+					for (int j = 0; j < x; j++)
+						clicked[i][j] = 10;
+				return -1;
+			}
+			if (tab[clicked_y][clicked_x] == 0) show_safe(clicked_x, clicked_y);
+			clicks_made = clicks_made + 1;
+			if (clicks_made == (x * y) - bombs) return 1;
+		}
+		if (event->mouse.button & 2 && clicked[clicked_y][clicked_x] != 10)
+		{
+			if (clicked[clicked_y][clicked_x] == 0)
+			{
+				clicked[clicked_y][clicked_x] = -2;
+				Scoreboard::bombs_remain = Scoreboard::bombs_remain - 1;
+			}
+			else if (clicked[clicked_y][clicked_x] == -2)
+			{
+				clicked[clicked_y][clicked_x] = 0;
+				Scoreboard::bombs_remain = Scoreboard::bombs_remain + 1;
+			}
+		}
+	}
+	return 0;
+}
+
+unsigned short Board::get_bombs()
+{
+	return bombs;
 }

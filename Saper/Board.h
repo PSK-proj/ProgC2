@@ -1,5 +1,7 @@
 #pragma once
-class Board
+#include <allegro5/allegro5.h>
+#include "Scoreboard.h"
+class Board : public Scoreboard
 {
 	// tablice
 	int** p;
@@ -21,12 +23,17 @@ class Board
 public:
 	void test();
 	void set_mode(unsigned short);
+	unsigned short get_mode();
 	void lvl_select();
 	void create_board();
 	void create_clicked();
 	void create_bombs_list();
 	void bombs_draw();
 	void set_field_numbers();
-
+	void clear_memory();
+	void draw_fields();
+	void show_safe(int, int);
+	int handle_field_click(float, float, ALLEGRO_EVENT*);
+	unsigned short get_bombs();
 };
 
