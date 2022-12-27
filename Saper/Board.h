@@ -35,5 +35,6 @@ public:
 	void show_safe(int, int);
 	int handle_field_click(float, float, ALLEGRO_EVENT*);
 	unsigned short get_bombs();
+	void clear_clicks_made();
 };
 

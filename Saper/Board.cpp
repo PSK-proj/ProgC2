@@ -40,7 +40,6 @@ void Board::test()
 void Board::set_mode(unsigned short mode)
 {
 	this->mode = mode;
-	//this->mode = 3; //! TYMCZASOWO USTAWIONE NA STA£Ê
 }
 
 unsigned short Board::get_mode()
@@ -222,7 +221,7 @@ int Board::handle_field_click(float mouse_x, float mouse_y, ALLEGRO_EVENT* event
 						clicked[i][j] = 10;
 				return -1;
 			}
-			if (tab[clicked_y][clicked_x] == 0) show_safe(clicked_x, clicked_y);
+			if (tab[clicked_y][clicked_x] == 0) this->show_safe(clicked_x, clicked_y);
 			clicks_made = clicks_made + 1;
 			if (clicks_made == (x * y) - bombs) return 1;
 		}
@@ -246,4 +245,10 @@ int Board::handle_field_click(float mouse_x, float mouse_y, ALLEGRO_EVENT* event
 unsigned short Board::get_bombs()
 {
 	return bombs;
+}
+
+
+void Board::clear_clicks_made()
+{
+	clicks_made = 0;
 }

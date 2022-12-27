@@ -77,6 +77,7 @@ int main()
 					p.create_bombs_list();
 					p.bombs_draw();
 					p.set_field_numbers();
+					p.clear_clicks_made();
 					Scoreboard::bombs_remain = p.get_bombs();
 
 					printf("\n\n--------------------------------\n\n");
@@ -117,7 +118,6 @@ int main()
 			}
 		}
 	}
-
 
 	al_destroy_display(display);
 	al_destroy_timer(timer);
