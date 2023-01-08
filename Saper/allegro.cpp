@@ -49,7 +49,6 @@ void allegro_display_win()
 	win = al_load_bitmap("img\\win.bmp");
 	al_draw_bitmap(baner, 0, 0, 0);
 	al_draw_bitmap(win, 0, 80, 0);
-	al_flip_display();
 	al_destroy_bitmap(baner);
 	al_destroy_bitmap(win);
 }
