@@ -80,9 +80,7 @@ int main()
 					p.clear_clicks_made();
 					Scoreboard::bombs_remain = p.get_bombs();
 
-					printf("\n\n--------------------------------\n\n");
-					p.test();
-					printf("\n\n--------------------------------\n\n");
+					p.debug_log();
 
 					al_start_timer(game_timer);
 					al_clear_to_color(al_map_rgb(0, 0, 0));
@@ -100,11 +98,11 @@ int main()
 				al_clear_to_color(al_map_rgb(0, 0, 0));
 				al_draw_bitmap(baner, 0, 0, 0);
 
-				p.draw_fields(); //tak dzia³a zamiast allegro_draw_fields()
+				p.draw_fields();
 
 				if (event.timer.source == game_timer && p.get_mode() != 10)
 					Scoreboard::set_time(event.timer.count);
-				Scoreboard::display_stats(); //tak dzia³a zamiast allegro_display_stats()
+				Scoreboard::display_stats();
 
 				if (game_state == 1)
 				{

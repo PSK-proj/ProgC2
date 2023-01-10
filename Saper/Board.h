@@ -13,7 +13,7 @@ class Board : public Scoreboard
 	unsigned short mode;
 	unsigned short bombs; // iloœæ bomb w sumie
 	unsigned short x; //iloœæ bomb w OX
-	unsigned short y;
+	unsigned short y; //iloœæ bomb w OY
 	unsigned short margin_x;
 	unsigned short margin_y;
 
@@ -21,7 +21,7 @@ class Board : public Scoreboard
 	static void clear_board(int**, unsigned short, unsigned short);
 
 public:
-	void test();
+	void debug_log();
 	void set_mode(unsigned short);
 	unsigned short get_mode();
 	void lvl_select();

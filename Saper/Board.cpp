@@ -6,14 +6,9 @@
 
 using namespace std;
 
-void Board::test()
+void Board::debug_log()
 {
-	cout << "X: " << x << endl;
-	cout << "Y: " << y << endl;
-	cout << "Bombs: " << bombs << endl;
-	cout << "margin_x: " << margin_x << endl;
-	cout << "margin_y: " << margin_y << endl << endl;
-
+	printf("\n\n--------------------------------\n\n");
 	for (int i = 0; i < y; i++)
 	{
 		for (int j = 0; j < x; j++)
@@ -34,6 +29,7 @@ void Board::test()
 		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 0x07);
 		putchar('\n');
 	}
+	printf("\n\n--------------------------------\n\n");
 }
 
 
@@ -146,7 +142,6 @@ void Board::bombs_draw()
 
 void Board::set_field_numbers()
 {
-	printf("   KOORDYNATY: \n");
 	unsigned short bombs = this->bombs;
 	int** tab = this->p;
 	unsigned char x_b, y_b;
@@ -156,7 +151,6 @@ void Board::set_field_numbers()
 	{
 		y_b = bombs_list[i] / x;
 		x_b = bombs_list[i] % x;
-		printf("\n%3d.bomba: %3hu, y_b: %3hhu, x_b: %3hhu\n", i + 1, bombs_list[i], y_b, x_b);
 
 		for (int j = 0; j < 9; j++)
 		{
