@@ -126,13 +126,14 @@ int main()
 			}
 		}
 	}
+	if(game_state!=0)
+		p.clear_memory();
 
 	al_destroy_display(display);
 	al_destroy_timer(timer);
 	al_destroy_timer(game_timer);
 	al_destroy_bitmap(baner);
 
-	p.clear_memory();
 
 	return 0;
 }
