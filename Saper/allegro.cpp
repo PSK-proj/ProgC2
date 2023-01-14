@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   allegro.cpp
+ * \brief  
+ * Obsluga Allegro5
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Styczen 2023
+ *********************************************************************/
+
 #include <stdio.h>
 #include <cstdlib>
 #include "allegro.h"

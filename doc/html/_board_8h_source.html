@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Gra Saper: Plik ÅºrÃ³dÅ‚owy Saper/Saper/Board.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Gra Saper
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">2ID14B Piotr Miernik, Oskar OÅ‚ub</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_board_8h_source.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Board.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_board_8h.html">IdÅº do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">/*****************************************************************/</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro5.h&gt;</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_scoreboard_8h.html">Scoreboard.h</a>&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_board.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_board.html">Board</a> : <span class="keyword">public</span> <a class="code" href="class_scoreboard.html">Scoreboard</a></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="comment">//tablice</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span>** p;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span>** clicked;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span>* bombs_list;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="comment">// zmienne badaj¹ce</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> clicks_made;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="comment">// zmienne zale¿ne od poziomu trudnoœci</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> mode;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> bombs; <span class="comment">// iloœæ bomb w sumie</span></div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> x; <span class="comment">//iloœæ bomb w OX</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> y; <span class="comment">//iloœæ bomb w OY</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> margin_x;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> margin_y;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span>** allocate_memory(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> y);</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> clear_board(<span class="keywordtype">int</span>** tab, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> x, <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> y);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a95069657f8f30dfc2272fbb0734092d7">debug_log</a>();</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a476e694b272f685051278eca4c573ae2">set_mode</a>(<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> mode);</div><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_board.html#a5e70b5d4d24dfbe87d102dd7e3d0fd3a">get_mode</a>();</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a121fd63109af94ba54cba664615f551f">lvl_select</a>();</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a87edbdfc05f77f65c8e081c8c9bd8af3">create_board</a>();</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a6070a593e8e711b4bcd4fc8298d0534a">create_clicked</a>();</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#acd9e0352efc88e40a444ea0a4325ba1e">create_bombs_list</a>();</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#af17da569fed91cf5e04e0b3fcce9db05">bombs_draw</a>();</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#ab8a60da56c5110b42a5d7c617c4fa680">set_field_numbers</a>();</div><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a1dd0b4f28f2894781bba1e169d83ebb0">clear_memory</a>();</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a61a386604560f553b78a2a12075af998">draw_fields</a>();</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div><div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#ae6bc9461cc231d0d49bea06e16fafee0">show_safe</a>(<span class="keywordtype">int</span> clicked_x, <span class="keywordtype">int</span> clicked_y);</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_board.html#aeb1898bdf11f89e8c9672d2393353f0a">handle_field_click</a>(<span class="keywordtype">float</span> mouse_x, <span class="keywordtype">float</span> mouse_y, ALLEGRO_EVENT* event);</div><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> <a class="code" href="class_board.html#ab40c77fc97caa0c34e69f6c0135c5e7d">get_bombs</a>();</div><div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_board.html#a03a029e0574b9f9d76606f77b5c38374">clear_clicks_made</a>();</div><div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;};</div><div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div><div class="ttc" id="class_board_html_a87edbdfc05f77f65c8e081c8c9bd8af3"><div class="ttname"><a href="class_board.html#a87edbdfc05f77f65c8e081c8c9bd8af3">Board::create_board</a></div><div class="ttdeci">void create_board()</div><div class="ttdoc">Przygotowanie planszy.</div><div class="ttdef"><b>Definition:</b> Board.cpp:115</div></div>
+<div class="ttc" id="class_board_html_a61a386604560f553b78a2a12075af998"><div class="ttname"><a href="class_board.html#a61a386604560f553b78a2a12075af998">Board::draw_fields</a></div><div class="ttdeci">void draw_fields()</div><div class="ttdoc">Rysowanie pol.</div><div class="ttdef"><b>Definition:</b> Board.cpp:182</div></div>
+<div class="ttc" id="class_board_html_a1dd0b4f28f2894781bba1e169d83ebb0"><div class="ttname"><a href="class_board.html#a1dd0b4f28f2894781bba1e169d83ebb0">Board::clear_memory</a></div><div class="ttdeci">void clear_memory()</div><div class="ttdoc">Zwalnianie pamieci.</div><div class="ttdef"><b>Definition:</b> Board.cpp:176</div></div>
+<div class="ttc" id="class_board_html_a476e694b272f685051278eca4c573ae2"><div class="ttname"><a href="class_board.html#a476e694b272f685051278eca4c573ae2">Board::set_mode</a></div><div class="ttdeci">void set_mode(unsigned short mode)</div><div class="ttdoc">Ustawianie trybu gry.</div><div class="ttdef"><b>Definition:</b> Board.cpp:44</div></div>
+<div class="ttc" id="class_board_html_af17da569fed91cf5e04e0b3fcce9db05"><div class="ttname"><a href="class_board.html#af17da569fed91cf5e04e0b3fcce9db05">Board::bombs_draw</a></div><div class="ttdeci">void bombs_draw()</div><div class="ttdoc">Losowanie bomb.</div><div class="ttdef"><b>Definition:</b> Board.cpp:132</div></div>
+<div class="ttc" id="class_board_html_a6070a593e8e711b4bcd4fc8298d0534a"><div class="ttname"><a href="class_board.html#a6070a593e8e711b4bcd4fc8298d0534a">Board::create_clicked</a></div><div class="ttdeci">void create_clicked()</div><div class="ttdoc">Przygotowanie macierzy pol odkrytych.</div><div class="ttdef"><b>Definition:</b> Board.cpp:121</div></div>
+<div class="ttc" id="class_scoreboard_html"><div class="ttname"><a href="class_scoreboard.html">Scoreboard</a></div><div class="ttdoc">Klasa Scoreboard</div><div class="ttdef"><b>Definition:</b> Scoreboard.h:13</div></div>
+<div class="ttc" id="class_board_html_a5e70b5d4d24dfbe87d102dd7e3d0fd3a"><div class="ttname"><a href="class_board.html#a5e70b5d4d24dfbe87d102dd7e3d0fd3a">Board::get_mode</a></div><div class="ttdeci">unsigned short get_mode()</div><div class="ttdoc">Odczytywanie trybu gry.</div><div class="ttdef"><b>Definition:</b> Board.cpp:49</div></div>
+<div class="ttc" id="class_board_html_a95069657f8f30dfc2272fbb0734092d7"><div class="ttname"><a href="class_board.html#a95069657f8f30dfc2272fbb0734092d7">Board::debug_log</a></div><div class="ttdeci">void debug_log()</div><div class="ttdoc">Debugowanie w konsoli.</div><div class="ttdef"><b>Definition:</b> Board.cpp:17</div></div>
+<div class="ttc" id="class_board_html"><div class="ttname"><a href="class_board.html">Board</a></div><div class="ttdoc">Klasa Board</div><div class="ttdef"><b>Definition:</b> Board.h:15</div></div>
+<div class="ttc" id="class_board_html_acd9e0352efc88e40a444ea0a4325ba1e"><div class="ttname"><a href="class_board.html#acd9e0352efc88e40a444ea0a4325ba1e">Board::create_bombs_list</a></div><div class="ttdeci">void create_bombs_list()</div><div class="ttdoc">Alokacja pamieci dla list bomb.</div><div class="ttdef"><b>Definition:</b> Board.cpp:127</div></div>
+<div class="ttc" id="class_board_html_aeb1898bdf11f89e8c9672d2393353f0a"><div class="ttname"><a href="class_board.html#aeb1898bdf11f89e8c9672d2393353f0a">Board::handle_field_click</a></div><div class="ttdeci">int handle_field_click(float mouse_x, float mouse_y, ALLEGRO_EVENT *event)</div><div class="ttdoc">Obsluga klikniec, informacje o stanie gry.</div><div class="ttdef"><b>Definition:</b> Board.cpp:209</div></div>
+<div class="ttc" id="class_board_html_a121fd63109af94ba54cba664615f551f"><div class="ttname"><a href="class_board.html#a121fd63109af94ba54cba664615f551f">Board::lvl_select</a></div><div class="ttdeci">void lvl_select()</div><div class="ttdoc">Wybieranie poziomu trudnosci.</div><div class="ttdef"><b>Definition:</b> Board.cpp:54</div></div>
+<div class="ttc" id="_scoreboard_8h_html"><div class="ttname"><a href="_scoreboard_8h.html">Scoreboard.h</a></div><div class="ttdoc">Plik naglowkowy klasy Scoreboard.</div></div>
+<div class="ttc" id="class_board_html_ae6bc9461cc231d0d49bea06e16fafee0"><div class="ttname"><a href="class_board.html#ae6bc9461cc231d0d49bea06e16fafee0">Board::show_safe</a></div><div class="ttdeci">void show_safe(int clicked_x, int clicked_y)</div><div class="ttdoc">Odkrywanie bezpiecznych obszarow.</div><div class="ttdef"><b>Definition:</b> Board.cpp:187</div></div>
+<div class="ttc" id="class_board_html_ab40c77fc97caa0c34e69f6c0135c5e7d"><div class="ttname"><a href="class_board.html#ab40c77fc97caa0c34e69f6c0135c5e7d">Board::get_bombs</a></div><div class="ttdeci">unsigned short get_bombs()</div><div class="ttdoc">Odczytywanie ilosci bomb.</div><div class="ttdef"><b>Definition:</b> Board.cpp:247</div></div>
+<div class="ttc" id="class_board_html_ab8a60da56c5110b42a5d7c617c4fa680"><div class="ttname"><a href="class_board.html#ab8a60da56c5110b42a5d7c617c4fa680">Board::set_field_numbers</a></div><div class="ttdeci">void set_field_numbers()</div><div class="ttdoc">Numeracja pól.</div><div class="ttdef"><b>Definition:</b> Board.cpp:151</div></div>
+<div class="ttc" id="class_board_html_a03a029e0574b9f9d76606f77b5c38374"><div class="ttname"><a href="class_board.html#a03a029e0574b9f9d76606f77b5c38374">Board::clear_clicks_made</a></div><div class="ttdeci">void clear_clicks_made()</div><div class="ttdoc">Zerowanie licznika odslonietych pol.</div><div class="ttdef"><b>Definition:</b> Board.cpp:253</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_1f416919b95f7529d92a0277008a0c87.html">Saper</a></li><li class="navelem"><a class="el" href="dir_b0f72cbaeeead7c3def0a3fe182f5dc4.html">Saper</a></li><li class="navelem"><a class="el" href="_board_8h.html">Board.h</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.15 </li>
+  </ul>
+</div>
+</body>
+</html>

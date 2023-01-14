@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   Board.cpp
+ * \brief  
+ * Klasa Board
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Styczen 2023
+ *********************************************************************/
+
 #include "Board.h"
 #include "allegro.h"
 #include <iostream>

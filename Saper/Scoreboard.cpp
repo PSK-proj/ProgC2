@@ -1,6 +1,13 @@
+/*****************************************************************//**
+ * \file   Scoreboard.cpp
+ * \brief  
+ * Klasa Scoreboard
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Styczen 2023
+ *********************************************************************/
+
 #include "Scoreboard.h"
 #include "allegro.h"
-
 
 void Scoreboard::display_stats()
 {

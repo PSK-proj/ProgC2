@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   main.cpp
+ * \brief  
+ * Gra Saper
+ * \author Piotr Miernik, Oskar Olub
+ * \date   Styczen 2023
+ *********************************************************************/
+
 #include <iostream>
 #include <Windows.h>
 #include <time.h>
@@ -11,7 +19,9 @@
 #define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
-
+/// <summary>
+/// Glowna funkcja programu.
+/// </summary>
 int main()
 {
 	srand(time(NULL));
